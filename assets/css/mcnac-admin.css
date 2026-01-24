@@ -1,0 +1,168 @@
+/**
+ * Admin Styles for MCNAC N8N Chat Advanced
+ */
+
+:root {
+    --mcnac-color-white: #ffffff;
+    --mcnac-color-gray-50: #f9fafb;
+    --mcnac-color-gray-100: #f3f4f6;
+    --mcnac-color-gray-200: #e5e7eb;
+    --mcnac-color-gray-500: #6b7280;
+    --mcnac-color-gray-800: #1f2937;
+    --mcnac-color-blue: #5ea17b;
+    /* Using green as primary */
+    --mcnac-color-blue-hover: #4a8c68;
+    --mcnac-color-green: #10b981;
+    --mcnac-border-radius: 8px;
+}
+
+.mcnac-wrap {
+    max-width: 900px;
+    margin: 20px 20px 20px 0;
+    background: var(--mcnac-color-white);
+    padding: 30px;
+    border-radius: var(--mcnac-border-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: var(--mcnac-color-gray-800);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.mcnac-wrap h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--mcnac-color-gray-800);
+    padding: 0;
+}
+
+.mcnac-wrap h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.mcnac-wrap p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--mcnac-color-gray-500);
+}
+
+/* Form Table overrides */
+.mcnac-wrap .form-table th {
+    padding: 20px 10px 20px 0;
+    font-weight: 500;
+    color: var(--mcnac-color-gray-800);
+}
+
+.mcnac-wrap .form-table td {
+    padding: 15px 10px;
+}
+
+.mcnac-wrap input[type="text"] {
+    border: 1px solid var(--mcnac-color-gray-200);
+    border-radius: var(--mcnac-border-radius);
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: none;
+    transition: border-color 0.2s;
+}
+
+.mcnac-wrap input[type="text"]:focus {
+    border-color: var(--mcnac-color-blue);
+    box-shadow: 0 0 0 1px var(--mcnac-color-blue);
+    outline: none;
+}
+
+/* Checkbox Groups */
+.mcnac-status-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 700px;
+}
+
+.mcnac-status-option {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: var(--mcnac-color-white);
+    border: 1px solid var(--mcnac-color-gray-200);
+    border-radius: var(--mcnac-border-radius);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--mcnac-color-gray-800);
+    transition: all 0.2s ease;
+    user-select: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.mcnac-status-option:hover {
+    background: var(--mcnac-color-gray-50);
+    border-color: var(--mcnac-color-blue);
+}
+
+.mcnac-status-option.checked {
+    background: #ecfdf5;
+    /* light green bg */
+    border-color: var(--mcnac-color-blue);
+    color: var(--mcnac-color-blue);
+}
+
+.mcnac-status-option input[type="checkbox"] {
+    margin-right: 10px;
+    border: 1px solid var(--mcnac-color-gray-500);
+    border-radius: 4px;
+}
+
+.mcnac-status-option input[type="checkbox"]:checked {
+    border-color: var(--mcnac-color-blue);
+}
+
+.mcnac-wrap .description {
+    color: var(--mcnac-color-gray-500);
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Buttons */
+.mcnac-wrap .button {
+    border-radius: var(--mcnac-border-radius) !important;
+    padding: 6px 16px !important;
+    height: auto !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease;
+}
+
+.mcnac-wrap .button-primary {
+    background: var(--mcnac-color-blue) !important;
+    border-color: var(--mcnac-color-blue) !important;
+    color: var(--mcnac-color-white) !important;
+}
+
+.mcnac-wrap .button-primary:hover {
+    background: var(--mcnac-color-blue-hover) !important;
+    border-color: var(--mcnac-color-blue-hover) !important;
+}
+
+.mcnac-contribution-message {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--mcnac-color-gray-200);
+    font-size: 13px;
+    color: var(--mcnac-color-gray-500);
+}
+
+.mcnac-contribution-message a {
+    color: var(--mcnac-color-blue);
+    text-decoration: none;
+}
+
+.mcnac-contribution-message a:hover {
+    text-decoration: underline;
+}

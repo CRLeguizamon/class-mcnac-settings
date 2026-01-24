@@ -1,0 +1,310 @@
+/**
+ * MCNAC N8N Chat Styles
+ * Premium, modern design.
+ */
+
+/* Widget Container */
+.mcnac-chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Toggle Button */
+.mcnac-chat-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--mcnac-primary, #5ea17b);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    outline: none;
+}
+
+.mcnac-chat-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mcnac-chat-toggle svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+/* Chat Window */
+.mcnac-chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    max-height: 80vh;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin: bottom right;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.mcnac-chat-window.active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Header */
+.mcnac-chat-header {
+    background: var(--mcnac-header-bg, #5ea17b);
+    color: var(--mcnac-header-text, #ffffff);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.mcnac-header-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.mcnac-header-logo-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.mcnac-header-logo-container img {
+    width: 100%;
+    max-width: 40px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+}
+
+.mcnac-header-logo-container svg {
+    width: 24px;
+    height: 24px;
+    color: var(--mcnac-primary, #5ea17b);
+}
+
+.mcnac-header-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mcnac-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--mcnac-header-text, #ffffff) !important;
+}
+
+.mcnac-subtitle {
+    margin: 2px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+    color: var(--mcnac-header-text, #ffffff) !important;
+    line-height: 1.2;
+}
+
+.mcnac-chat-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+    margin-top: -5px;
+}
+
+.mcnac-chat-close:hover {
+    opacity: 1;
+}
+
+/* Messages Area */
+.mcnac-chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mcnac-message {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease;
+}
+
+.mcnac-message.user {
+    background: var(--mcnac-user-bg, #5ea17b);
+    color: var(--mcnac-user-text, #ffffff);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.mcnac-message.bot {
+    background: #ffffff;
+    color: #333333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.mcnac-message.bot.typing {
+    display: flex;
+    gap: 4px;
+    padding: 15px 14px;
+    min-width: 40px;
+}
+
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+/* Input Area */
+.mcnac-chat-input-area {
+    padding: 16px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#mcnac-chat-input {
+    flex: 1;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#mcnac-chat-input:focus {
+    border-color: var(--mcnac-primary, #5ea17b);
+}
+
+#mcnac-chat-send {
+    background: transparent;
+    border: none;
+    color: var(--mcnac-primary, #5ea17b);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mcnac-chat-send:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#mcnac-chat-send:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .mcnac-chat-window {
+        bottom: 90px;
+        right: 20px;
+        height: 60vh;
+    }
+}
+
+/* Powered By Link */
+.mcnac-powered-by {
+    text-align: center;
+    padding: 8px 0;
+    font-size: 11px;
+    background: #ffffff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.mcnac-powered-by a {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mcnac-powered-by a:hover {
+    color: var(--mcnac-primary, #5ea17b);
+}
