@@ -1,9 +1,9 @@
-=== MCNAC N8N Chat Advanced ===
+=== MCOD N8N node Chat Advanced ===
 Contributors: crleguizamon
 Donate link: https://www.paypal.com/paypalme/cristian18josue
 Tags: n8n, chat, automation, widget
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3
@@ -13,7 +13,7 @@ Easily integrate an n8n-powered chat widget into your WordPress site.
 
 == Description ==
 
-MCNAC N8N Chat Advanced allows you to connect your WordPress site to n8n workflows via a customizable chat widget.
+MCOD N8N node Chat Advanced allows you to connect your WordPress site to n8n workflows via a customizable chat widget.
 
 **Features:**
 *   **Customizable Appearance:** Change colors, titles, and welcome messages to match your brand.

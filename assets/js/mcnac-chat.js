@@ -107,10 +107,21 @@ jQuery(document).ready(function ($) {
             this.$messages.scrollTop(this.$messages[0].scrollHeight);
         },
 
-        formatText: function (text) {
-            // Basic formatting (newlines to <br>)
+        escapeHtml: function (text) {
             if (!text) return '';
-            return text.replace(/\n/g, '<br>');
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        },
+
+        formatText: function (text) {
+            // Escape HTML then convert newlines to <br>
+            if (!text) return '';
+            let safeText = this.escapeHtml(text);
+            return safeText.replace(/\n/g, '<br>');
         },
 
         sendMessage: function () {
