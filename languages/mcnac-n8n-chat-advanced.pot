@@ -1,0 +1,127 @@
+# Copyright (C) 2026 crleguizamon
+# This file is distributed under the same license as the MCOD N8N node Chat Advanced plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: MCOD N8N node Chat Advanced 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mcnac-n8n-chat-advanced\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Manual\n"
+"X-Domain: mcnac-n8n-chat-advanced\n"
+
+#. Plugin Name of the plugin
+msgid "MCOD N8N node Chat Advanced"
+msgstr ""
+
+#. Description of the plugin
+msgid "Chat integration for n8n."
+msgstr ""
+
+#: mcnac-n8n-chat-advanced.php:35
+msgid "Settings"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:67
+#: includes/class-mcnac-settings.php:68
+msgid "MCNAC N8N Chat"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:89
+msgid "General Settings"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:96
+msgid "Webhook URL"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:102
+msgid "The n8n webhook URL for the chat."
+msgstr ""
+
+#: includes/class-mcnac-settings.php:108
+msgid "Show Creator Watermark"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:114
+msgid "Show \"Desarrollado por mcodform.com\" in the chat footer."
+msgstr ""
+
+#: includes/class-mcnac-settings.php:121
+msgid "Appearance & Text"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:128
+msgid "Chat Logo"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:134
+msgid "Upload an image to display in the header (overrides default icon). Recommended: 40x40px."
+msgstr ""
+
+#: includes/class-mcnac-settings.php:140
+msgid "Chat Title"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:144
+msgid "Chat Subtitle"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:148
+msgid "Initial Message"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:152
+msgid "Start Button Text"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:156
+msgid "Message Placeholder"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:160
+msgid "Primary Color"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:165
+msgid "Header Background"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:170
+msgid "Header Text Color"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:175
+msgid "User Message Background"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:180
+msgid "User Message Text"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:275
+msgid "Choose Image"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:276
+msgid "Remove"
+msgstr ""
+
+#: includes/class-mcnac-settings.php:344
+#, php-format
+msgid "This plugin is in constant evolution. If you have ideas or suggestions, do not hesitate to contact me at %s. Your collaboration is highly valued!"
+msgstr ""
+
+#: includes/class-mcnac-frontend.php:98
+msgid "Open Chat"
+msgstr ""
+
+#: includes/class-mcnac-frontend.php:117
+msgid "Close Chat"
+msgstr ""
+
+#: includes/class-mcnac-frontend.php:133
+msgid "Desarrollado por mcodform.com"
+msgstr ""
