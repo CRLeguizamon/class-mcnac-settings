@@ -23,6 +23,11 @@ require_once MCNAC_DIR . 'includes/class-mcnac-settings.php';
 $mcnac_settings = new MCNAC_Settings();
 $mcnac_settings->init();
 
+// Include and initialize exclusions
+require_once MCNAC_DIR . 'includes/class-mcnac-exclusions.php';
+$mcnac_exclusions = new MCNAC_Exclusions();
+$mcnac_exclusions->init();
+
 // Include and initialize frontend
 require_once MCNAC_DIR . 'includes/class-mcnac-frontend.php';
 $mcnac_frontend = new MCNAC_Frontend();

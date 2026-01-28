@@ -27,6 +27,11 @@ class MCNAC_Frontend {
 	 * Enqueue scripts and styles.
 	 */
 	public function enqueue_assets() {
+		// Check if chat should be hidden on this page.
+		if ( class_exists( 'MCNAC_Exclusions' ) && MCNAC_Exclusions::should_hide_chat() ) {
+			return;
+		}
+
 		// Enqueue CSS
 		wp_enqueue_style(
 			'mcnac-chat-style',
@@ -87,6 +92,11 @@ class MCNAC_Frontend {
 	 * Render the chat widget HTML in the footer.
 	 */
 	public function render_chat_widget() {
+		// Check if chat should be hidden on this page.
+		if ( class_exists( 'MCNAC_Exclusions' ) && MCNAC_Exclusions::should_hide_chat() ) {
+			return;
+		}
+
 		$options = get_option( 'mcnac_settings' );
 		// Only render if webhook URL is set
 		if ( empty( $options['webhook_url'] ) ) {

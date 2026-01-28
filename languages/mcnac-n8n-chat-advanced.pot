@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MCOD N8N node Chat Advanced 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mcnac-n8n-chat-advanced\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-01-27 19:20:13+00:00\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Chat integration for n8n."
 msgstr ""
 
-#: mcnac-n8n-chat-advanced.php:35
+#: mcnac-n8n-chat-advanced.php:40
 msgid "Settings"
 msgstr ""
 
@@ -101,11 +101,11 @@ msgstr ""
 msgid "User Message Text"
 msgstr ""
 
-#: includes/class-mcnac-settings.php:275
+#: includes/class-mcnac-settings.php:282
 msgid "Choose Image"
 msgstr ""
 
-#: includes/class-mcnac-settings.php:276
+#: includes/class-mcnac-settings.php:283
 msgid "Remove"
 msgstr ""
 
@@ -114,14 +114,88 @@ msgstr ""
 msgid "This plugin is in constant evolution. If you have ideas or suggestions, do not hesitate to contact me at %s. Your collaboration is highly valued!"
 msgstr ""
 
-#: includes/class-mcnac-frontend.php:98
+#: includes/class-mcnac-frontend.php:108
 msgid "Open Chat"
 msgstr ""
 
-#: includes/class-mcnac-frontend.php:117
+#: includes/class-mcnac-frontend.php:127
 msgid "Close Chat"
 msgstr ""
 
-#: includes/class-mcnac-frontend.php:133
+#: includes/class-mcnac-frontend.php:143
 msgid "Desarrollado por mcodform.com"
+msgstr ""
+
+#. Exclusions Page Strings
+#: includes/class-mcnac-exclusions.php:74
+msgid "Hold Ctrl (Cmd on Mac) + click to select or deselect multiple items."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:85
+msgid "MCNAC Chat Exclusions"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:86
+msgid "MCNAC Exclusions"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:302
+msgid "Configure where the chat widget should be hidden or shown."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:312
+msgid "Mode"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:316
+msgid "Exclude (hide chat on selected)"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:317
+msgid "Include Only (show chat ONLY on selected)"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:319
+msgid "Choose whether to hide the chat on selected items (Exclude) or show ONLY on selected items (Include Only)."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:326
+msgid "Pages"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:336
+msgid "Select pages."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:343
+msgid "Posts"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:353
+msgid "Select posts."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:360
+msgid "Post Types"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:370
+msgid "Select post types. Chat will be hidden on all content of these types."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:377
+msgid "URL Contains"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:381
+msgid "Enter URL patterns, one per line. Chat will be hidden on any URL containing these strings. Example: /checkout, /cart, ?add-to-cart"
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:394
+#, php-format
+msgid "Configure the main chat settings on the %s."
+msgstr ""
+
+#: includes/class-mcnac-exclusions.php:395
+msgid "MCNAC N8N Chat settings page"
 msgstr ""

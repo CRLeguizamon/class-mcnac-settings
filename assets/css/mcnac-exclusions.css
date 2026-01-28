@@ -1,0 +1,84 @@
+/**
+ * MCNAC Exclusions Admin Styles
+ * Extends mcnac-admin.css with exclusions-specific styling
+ *
+ * @package MCNAC_N8N_Chat
+ */
+
+/* Intro description */
+.mcnac-exclusions-wrap>p.description {
+    font-size: 14px;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+/* Select dropdown styling */
+.mcnac-exclusions-wrap select {
+    border: 1px solid var(--mcnac-color-gray-200);
+    border-radius: var(--mcnac-border-radius);
+    padding: 8px 12px;
+    font-size: 14px;
+    min-width: 300px;
+    max-width: 100%;
+}
+
+.mcnac-exclusions-wrap select:focus {
+    border-color: var(--mcnac-color-blue);
+    box-shadow: 0 0 0 1px var(--mcnac-color-blue);
+    outline: none;
+}
+
+/* Multiselect styling */
+.mcnac-exclusions-wrap select[multiple] {
+    min-height: 150px;
+    padding: 8px;
+}
+
+.mcnac-exclusions-wrap select[multiple] option {
+    padding: 8px 12px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+}
+
+.mcnac-exclusions-wrap select[multiple] option:checked {
+    background: linear-gradient(0deg, var(--mcnac-color-blue) 0%, var(--mcnac-color-blue) 100%);
+    color: var(--mcnac-color-white);
+}
+
+/* Textarea styling */
+.mcnac-exclusions-wrap textarea {
+    border: 1px solid var(--mcnac-color-gray-200);
+    border-radius: var(--mcnac-border-radius);
+    padding: 12px;
+    font-size: 14px;
+    font-family: monospace;
+    line-height: 1.6;
+    resize: vertical;
+    max-width: 600px;
+}
+
+.mcnac-exclusions-wrap textarea:focus {
+    border-color: var(--mcnac-color-blue);
+    box-shadow: 0 0 0 1px var(--mcnac-color-blue);
+    outline: none;
+}
+
+/* Mode selector */
+.mcnac-exclusions-wrap #exclusion_mode {
+    min-width: 350px;
+}
+
+/* Field descriptions */
+.mcnac-exclusions-wrap .form-table td .description {
+    margin-top: 8px;
+    font-style: normal;
+    color: var(--mcnac-color-gray-500);
+}
+
+/* Helper text for multiselect */
+.mcnac-exclusions-wrap .mcnac-multiselect-help {
+    font-size: 12px;
+    color: var(--mcnac-color-gray-500);
+    margin-top: 6px;
+    font-style: italic;
+}
