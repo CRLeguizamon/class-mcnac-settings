@@ -39,7 +39,7 @@ class MCNAC_Settings {
 	 */
 	public function enqueue_admin_assets( $hook ) {
 		// Only load on our settings page
-		if ( 'settings_page_mcnac-n8n-chat' !== $hook ) {
+		if ( 'toplevel_page_mcnac-n8n-chat' !== $hook ) {
 			return;
 		}
 
@@ -63,9 +63,21 @@ class MCNAC_Settings {
 	 * Add the settings page to the admin menu.
 	 */
 	public function add_settings_page() {
-		add_options_page(
-			__( 'MCNAC N8N Chat', 'mcnac-n8n-chat-advanced' ),
-			__( 'MCNAC N8N Chat', 'mcnac-n8n-chat-advanced' ),
+		add_menu_page(
+			__( 'MCOD N8N Chat', 'mcnac-n8n-chat-advanced' ),
+			__( 'MCOD Chat', 'mcnac-n8n-chat-advanced' ),
+			'manage_options',
+			'mcnac-n8n-chat',
+			array( $this, 'render_settings_page' ),
+			'dashicons-format-chat',
+			25
+		);
+
+		// Add submenu page for General Settings (restores the main menu item as a submenu)
+		add_submenu_page(
+			'mcnac-n8n-chat',
+			__( 'General Settings', 'mcnac-n8n-chat-advanced' ),
+			__( 'General Settings', 'mcnac-n8n-chat-advanced' ),
 			'manage_options',
 			'mcnac-n8n-chat',
 			array( $this, 'render_settings_page' )
@@ -86,7 +98,7 @@ class MCNAC_Settings {
 
 		add_settings_section(
 			'mcnac_general_section',
-			__( 'General Settings', 'mcnac-n8n-chat-advanced' ),
+			'', // Title removed to avoid duplication with page title
 			null,
 			'mcnac-n8n-chat'
 		);
@@ -103,18 +115,7 @@ class MCNAC_Settings {
 			)
 		);
 
-		add_settings_field(
-			'show_powered_by',
-			__( 'Show Creator Watermark', 'mcnac-n8n-chat-advanced' ),
-			array( $this, 'render_checkbox_field' ),
-			'mcnac-n8n-chat',
-			'mcnac_general_section',
-			array(
-				'id'          => 'show_powered_by',
-				'description' => __( 'Show "Desarrollado por mcodform.com" in the chat footer.', 'mcnac-n8n-chat-advanced' ),
-				'default'     => 1, // Default enabled
-			)
-		);
+		// show_powered_by field removed.
 
 		add_settings_section(
 			'mcnac_appearance_section',
@@ -216,7 +217,7 @@ class MCNAC_Settings {
 			$sanitized['chat_logo'] = esc_url_raw( $input['chat_logo'] );
 		}
 
-		$sanitized['show_powered_by'] = isset( $input['show_powered_by'] ) ? 1 : 0;
+		// show_powered_by sanitization removed.
 
 		$text_fields = array( 'chat_title', 'chat_subtitle', 'initial_message', 'btn_start_text', 'placeholder' );
 		foreach ( $text_fields as $field ) {
@@ -298,23 +299,8 @@ class MCNAC_Settings {
 	 * @param array $args Field arguments.
 	 */
 	public function render_checkbox_field( $args ) {
-		$options = get_option( self::OPTION_NAME );
-		$id      = $args['id'];
-		$default = isset( $args['default'] ) ? $args['default'] : 0;
-		// Check valid value (1 or 0)
-		$value   = isset( $options[ $id ] ) ? $options[ $id ] : $default;
-		
-		printf(
-			'<input type="checkbox" id="%s" name="%s[%s]" value="1" %s />',
-			esc_attr( $id ),
-			esc_attr( self::OPTION_NAME ),
-			esc_attr( $id ),
-			checked( 1, $value, false )
-		);
-		
-		if ( isset( $args['description'] ) ) {
-			echo '<p class="description">' . esc_html( $args['description'] ) . '</p>';
-		}
+		// Method kept for potential future use or external compatibility.
+		// Implementation removed as no current fields use it.
 	}
 
 	/**

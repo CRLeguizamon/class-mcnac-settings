@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the MCOD N8N node Chat Advanced plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: MCOD N8N node Chat Advanced 1.0.0\n"
+"Project-Id-Version: MCOD N8N node chat advanced 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mcnac-n8n-chat-advanced\n"
 "POT-Creation-Date: 2026-01-27 19:20:13+00:00\n"
 "Language-Team: English\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Domain: mcnac-n8n-chat-advanced\n"
 
 #. Plugin Name of the plugin
-msgid "MCOD N8N node Chat Advanced"
+msgid "MCOD N8N node chat advanced"
 msgstr ""
 
 #. Description of the plugin
@@ -25,8 +25,11 @@ msgid "Settings"
 msgstr ""
 
 #: includes/class-mcnac-settings.php:67
+msgid "MCOD N8N Chat"
+msgstr ""
+
 #: includes/class-mcnac-settings.php:68
-msgid "MCNAC N8N Chat"
+msgid "MCOD Chat"
 msgstr ""
 
 #: includes/class-mcnac-settings.php:89
@@ -41,13 +44,7 @@ msgstr ""
 msgid "The n8n webhook URL for the chat."
 msgstr ""
 
-#: includes/class-mcnac-settings.php:108
-msgid "Show Creator Watermark"
-msgstr ""
 
-#: includes/class-mcnac-settings.php:114
-msgid "Show \"Desarrollado por mcodform.com\" in the chat footer."
-msgstr ""
 
 #: includes/class-mcnac-settings.php:121
 msgid "Appearance & Text"
@@ -122,9 +119,7 @@ msgstr ""
 msgid "Close Chat"
 msgstr ""
 
-#: includes/class-mcnac-frontend.php:143
-msgid "Desarrollado por mcodform.com"
-msgstr ""
+
 
 #. Exclusions Page Strings
 #: includes/class-mcnac-exclusions.php:74
@@ -132,11 +127,11 @@ msgid "Hold Ctrl (Cmd on Mac) + click to select or deselect multiple items."
 msgstr ""
 
 #: includes/class-mcnac-exclusions.php:85
-msgid "MCNAC Chat Exclusions"
+msgid "MCOD Chat Exclusions"
 msgstr ""
 
 #: includes/class-mcnac-exclusions.php:86
-msgid "MCNAC Exclusions"
+msgid "Exclusions"
 msgstr ""
 
 #: includes/class-mcnac-exclusions.php:302

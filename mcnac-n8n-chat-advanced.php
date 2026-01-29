@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: MCOD N8N node Chat Advanced
+ * Plugin Name: MCOD N8N node chat advanced
  * Description: Chat integration for n8n.
  * Version: 1.0.0
  * Author: crleguizamon
@@ -37,7 +37,7 @@ $mcnac_frontend->init();
  * Add Settings link to plugin actions.
  */
 function mcnac_add_settings_link( $links ) {
-	$settings_link = '<a href="options-general.php?page=mcnac-n8n-chat">' . __( 'Settings', 'mcnac-n8n-chat-advanced' ) . '</a>';
+	$settings_link = '<a href="admin.php?page=mcnac-n8n-chat">' . __( 'Settings', 'mcnac-n8n-chat-advanced' ) . '</a>';
 	array_unshift( $links, $settings_link );
 	return $links;
 }

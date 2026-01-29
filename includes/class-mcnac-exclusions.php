@@ -37,7 +37,8 @@ class MCNAC_Exclusions {
 	 * @param string $hook The current admin page hook.
 	 */
 	public function enqueue_admin_assets( $hook ) {
-		if ( 'settings_page_mcnac-exclusions' !== $hook ) {
+		// Use loose check to ensure it catches the correct page hook
+		if ( false === strpos( $hook, 'mcnac-exclusions' ) ) {
 			return;
 		}
 
@@ -81,9 +82,9 @@ class MCNAC_Exclusions {
 	 */
 	public function add_exclusions_submenu() {
 		add_submenu_page(
-			'options-general.php',
+			'mcnac-n8n-chat',
 			__( 'MCNAC Chat Exclusions', 'mcnac-n8n-chat-advanced' ),
-			__( 'MCNAC Exclusions', 'mcnac-n8n-chat-advanced' ),
+			__( 'Exclusions', 'mcnac-n8n-chat-advanced' ),
 			'manage_options',
 			'mcnac-exclusions',
 			array( $this, 'render_exclusions_page' )
@@ -299,7 +300,7 @@ class MCNAC_Exclusions {
 		$post_types_list = $this->get_post_types_list();
 		?>
 		<div class="mcnac-wrap mcnac-exclusions-wrap">
-			<h1><?php esc_html_e( 'MCNAC Chat Exclusions', 'mcnac-n8n-chat-advanced' ); ?></h1>
+			<h1><?php esc_html_e( 'MCOD Chat Exclusions', 'mcnac-n8n-chat-advanced' ); ?></h1>
 			<p class="description"><?php esc_html_e( 'Configure where the chat widget should be hidden or shown.', 'mcnac-n8n-chat-advanced' ); ?></p>
 
 			<form action="options.php" method="post">
@@ -392,7 +393,7 @@ class MCNAC_Exclusions {
 					printf(
 						/* translators: %s: settings page link */
 						esc_html__( 'Configure the main chat settings on the %s.', 'mcnac-n8n-chat-advanced' ),
-						'<a href="' . esc_url( admin_url( 'options-general.php?page=mcnac-n8n-chat' ) ) . '">' . esc_html__( 'MCNAC N8N Chat settings page', 'mcnac-n8n-chat-advanced' ) . '</a>'
+						'<a href="' . esc_url( admin_url( 'admin.php?page=mcnac-n8n-chat' ) ) . '">' . esc_html__( 'MCNAC N8N Chat settings page', 'mcnac-n8n-chat-advanced' ) . '</a>'
 					);
 					?>
 				</p>

@@ -83,7 +83,7 @@ class MCNAC_Frontend {
 				'startText'      => isset( $options['btn_start_text'] ) ? $options['btn_start_text'] : 'Start Chat',
 				'logo'           => isset( $options['chat_logo'] ) ? $options['chat_logo'] : '',
 				'defaultLogo'    => MCNAC_URL . 'assets/images/mcnac-user-icon.jpg',
-				'showPoweredBy'  => isset( $options['show_powered_by'] ) && $options['show_powered_by'] == 1,
+				// showPoweredBy removed
 			)
 		);
 	}
@@ -138,11 +138,7 @@ class MCNAC_Frontend {
 						</svg>
 					</button>
 				</div>
-				<?php if ( isset( $options['show_powered_by'] ) && $options['show_powered_by'] == 1 ) : ?>
-					<div class="mcnac-powered-by">
-						<a href="https://mcodform.com/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Desarrollado por mcodform.com', 'mcnac-n8n-chat-advanced' ); ?></a>
-					</div>
-				<?php endif; ?>
+				<!-- Powered By link removed -->
 			</div>
 		</div>
 		<?php

@@ -1,10 +1,10 @@
-# MCOD N8N node Chat Advanced 🤖
+# MCOD N8N node chat advanced 🤖
 
 Integrate a powerful, customizable n8n-powered chat widget into your WordPress site with ease.
 
 ## Description
 
-**MCOD N8N node Chat Advanced** allows you to seamlessly connect your WordPress website to [n8n](https://n8n.io/) automation workflows via a stylish, responsive chat widget. Perfect for AI assistants, support bots, or lead generation flows.
+**MCOD N8N node chat advanced** allows you to seamlessly connect your WordPress website to [n8n](https://n8n.io/) automation workflows via a stylish, responsive chat widget. Perfect for AI assistants, support bots, or lead generation flows.
 
 ## ✨ Features
 
@@ -16,14 +16,13 @@ Integrate a powerful, customizable n8n-powered chat widget into your WordPress s
 *   **🛡️ Secure:** XSS protection for chat messages and WordPress-standard security practices.
 *   **📱 Responsive Design:** Looks great on desktop and mobile.
 *   **🔧 Developer Friendly:** Clean code structure, translation-ready (`.pot` included).
-*   **🏷️ White Label Option:** Ability to toggle the "Powered by" footer link.
 
 ## 🚀 Installation
 
 1.  Download the repository or the standard plugin ZIP.
 2.  Upload the `mcnac-n8n-chat-advanced` folder to your `/wp-content/plugins/` directory.
 3.  Activate the plugin through the **Plugins** menu in WordPress.
-4.  Go to **Settings > MCNAC N8N Chat** to configure.
+4.  Go to **MCOD Chat** to configure.
 
 ## ⚙️ Configuration
 

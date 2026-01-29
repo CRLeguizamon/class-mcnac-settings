@@ -290,21 +290,4 @@
     }
 }
 
-/* Powered By Link */
-.mcnac-powered-by {
-    text-align: center;
-    padding: 8px 0;
-    font-size: 11px;
-    background: #ffffff;
-    border-top: 1px solid #f0f0f0;
-}
-
-.mcnac-powered-by a {
-    color: #aaaaaa;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.mcnac-powered-by a:hover {
-    color: var(--mcnac-primary, #5ea17b);
-}
+/* Powered By Link Removed */
